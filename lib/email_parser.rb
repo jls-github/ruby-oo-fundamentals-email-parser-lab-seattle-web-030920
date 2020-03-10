@@ -14,9 +14,8 @@ class EmailAddressParser
   end
   
   def parse
-    parsed_emails = @emails.split(" ")
-    parsed_emails.each {|email| email.tr!(",", "")}
-    parsed_emails
+    parsed_emails = @emails.split(" ").each {|email email.tr!(",", "")}
+    parsed_emails.uniq
   end
   
 end
