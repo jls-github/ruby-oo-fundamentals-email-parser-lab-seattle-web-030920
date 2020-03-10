@@ -14,7 +14,7 @@ class EmailAddressParser
   end
   
   def parse
-    @emails.split(" ").split(",").reject {|email| email == ","}
+    @emails.split(" ").each {|email| split(",").reject {|email| email == ","}}
   end
   
 end
